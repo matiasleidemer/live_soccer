@@ -7,7 +7,7 @@ module LiveSoccer
     MATCHES_URL = "http://espn.estadao.com.br/temporeal/acoes.listaPartidasAjax.tiles.logic?"
     
     def self.fetch_matches
-      @raw_matches ||= HTTParty.get(MATCHES_URL).parsed_response
+      @fetch_matches ||= HTTParty.get(MATCHES_URL).parsed_response
     end
     
     def self.parse_matches
@@ -16,8 +16,8 @@ module LiveSoccer
           matches << { date: DateTime.parse(match.css('li.noticia_hora').first.content), 
                        home: match.css('div.jogo td.time1').first.content.strip, 
                        visitor: match.css('div.jogo td.time2').first.content.strip, 
-                       score: match.css('div.jogo td.placar a').first.content.strip,
-                       id: match.css('div.jogo td.placar a').first.attributes["href"].value.split("id=").last }
+                       score: match.css('div.jogo td.placar').last.content.strip,
+                       id: match.css('div.jogo td.placar a').first && match.css('div.jogo td.placar a').first.attributes["href"].value.split("id=").last }
         end
       end
     end
