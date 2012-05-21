@@ -10,5 +10,9 @@ module LiveSoccer
       end
     end
     
+    def to_s
+      self.matches.map(&:to_s).join "\n"
+    end
+    
   end
 end

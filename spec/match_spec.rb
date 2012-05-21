@@ -13,7 +13,7 @@ describe "Match" do
   
   describe "#to_s" do
     it "returns the match as a string" do
-      match = LiveSoccer::Match.new(params)
+      match = LiveSoccer::Match.new params
       match.to_s.should == "20May 18:30 - Vasco 1 x 2 Grêmio"
     end
   end
