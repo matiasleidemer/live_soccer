@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem "httparty", "~> 0.8.3"
 gem "nokogiri", "~> 1.5.2"
+gem "thor", "~> 0.15.2"
 
 group :development do
   gem "rspec", "~> 2.10.0"

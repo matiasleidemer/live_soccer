@@ -31,6 +31,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
     simplecov-html (0.5.3)
+    thor (0.15.2)
 
 PLATFORMS
   ruby
@@ -44,3 +45,4 @@ DEPENDENCIES
   rdoc (~> 3.12)
   rspec (~> 2.10.0)
   simplecov (~> 0.6.4)
+  thor (~> 0.15.2)
