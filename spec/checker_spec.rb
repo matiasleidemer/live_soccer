@@ -2,7 +2,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Checker" do
-  let(:checker) { LiveSoccer::Checker }
   let(:matches_url) { LiveSoccer::Checker::MATCHES_URL }
   
   before :each do
@@ -11,7 +10,7 @@ describe "Checker" do
   
   describe ".fetch_matches" do
     it "fetches data from the matches URL" do
-      checker.fetch_matches.should_not be_nil
+      LiveSoccer::Checker.fetch_matches.should_not be_nil
     end
   end
   
@@ -19,7 +18,7 @@ describe "Checker" do
     let(:match) { { date: DateTime.parse("20May 18h30"), home: "Vasco", visitor: "Grêmio", score: "1 x 2", id: "40075" } }
     
     it "parses the matches" do
-      checker.parse_matches.first.should == match
+      LiveSoccer::Checker.parse_matches.first.should == match
     end
     
   end
