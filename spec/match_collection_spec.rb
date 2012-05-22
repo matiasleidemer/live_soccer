@@ -20,8 +20,17 @@ describe "MatchCollection" do
   end
   
   describe "#to_s" do
-    it "prints each Match" do
-      match_collection.to_s.should == "20May 18:30 - Vasco 1 x 2 Grêmio\n20May 18:30 - Cruzeiro 0 x 0 Atlético-GO"
+    context "with running matches" do
+      it "prints each Match" do
+        match_collection.to_s.should == "20May 18:30 - Vasco 1 x 2 Grêmio\n20May 18:30 - Cruzeiro 0 x 0 Atlético-GO"
+      end
+    end
+    
+    context "without running matches" do
+      it "prints a message" do
+        match_collection = LiveSoccer::MatchCollection.new []
+        match_collection.to_s.should == "Sorry, but looks like no one is on the pitch right now..."
+      end
     end
   end
   

@@ -11,6 +11,7 @@ module LiveSoccer
     end
     
     def to_s
+      return "Sorry, but looks like no one is on the pitch right now..." if self.matches.empty?
       self.matches.map(&:to_s).join "\n"
     end
     
