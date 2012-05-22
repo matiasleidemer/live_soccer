@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "live_soccer"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matias H. Leidemer"]
-  s.date = "2012-05-21"
+  s.date = "2012-05-22"
   s.description = "Find out how your soccer team is going right now!"
   s.email = "matiasleidemer@gmail.com"
   s.executables = ["live_soccer"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    "CHANGELOG",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
