@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "live_soccer"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matias H. Leidemer"]
-  s.date = "2012-05-22"
+  s.date = "2012-05-26"
   s.description = "Find out how your soccer team is going right now!"
   s.email = "matiasleidemer@gmail.com"
   s.executables = ["live_soccer"]
@@ -30,10 +30,12 @@ Gem::Specification.new do |s|
     "bin/live_soccer",
     "lib/live_soccer.rb",
     "lib/live_soccer/checker.rb",
+    "lib/live_soccer/command.rb",
     "lib/live_soccer/match.rb",
     "lib/live_soccer/match_collection.rb",
     "live_soccer.gemspec",
     "spec/checker_spec.rb",
+    "spec/command_spec.rb",
     "spec/live_soccer_spec.rb",
     "spec/match_collection_spec.rb",
     "spec/match_spec.rb",
