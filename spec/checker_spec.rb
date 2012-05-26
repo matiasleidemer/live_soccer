@@ -15,7 +15,7 @@ describe "Checker" do
   end
   
   describe ".parse_matches" do
-    let(:match) { { date: DateTime.parse("18h30"), home: "Vasco", visitor: "Grêmio", score: "1 x 2", id: "40075" } }
+    let(:match) { { date: DateTime.parse("24May 20h00 -03:00"), home: "Santos", visitor: "Vélez Sarsfield", score: "1 x 0", id: "39230" } }
     
     it "parses the matches" do
       LiveSoccer::Checker.parse_matches.first.should == match
