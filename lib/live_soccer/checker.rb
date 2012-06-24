@@ -9,7 +9,7 @@ end
 
 module LiveSoccer
   class Checker
-    MATCHES_URL = "http://espn.estadao.com.br/temporeal/acoes.listaPartidasAjax.tiles.logic?"
+    MATCHES_URL = "http://espn.estadao.com.br/old/temporeal/acoes.listaPartidasAjax.tiles.logic?"
     
     def self.fetch_matches
       @fetch_matches ||= HTTParty.get(MATCHES_URL).parsed_response
