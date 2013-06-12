@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/matiasleidemer/live_soccer)
+[![Code Climate](https://codeclimate.com/github/matiasleidemer/live_soccer.png)](https://codeclimate.com/github/matiasleidemer/live_soccer)
 
 # live_soccer
 
